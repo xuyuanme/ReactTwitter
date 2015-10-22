@@ -12,6 +12,7 @@ var {
     } = React
 
 var _tOauthAuthorize = 'https://twitter.com/oauth/authorize?oauth_token='
+var _apiRequestToken = 'http://xuyuan.me:8483/twitter/requestToken'
 var _apiAccessToken = 'http://xuyuan.me:8483/twitter/accessToken?oauth_verifier='
 var _apiProfile = 'http://xuyuan.me:8483/twitter/profile'
 
@@ -50,7 +51,7 @@ var ReactTwitter = React.createClass({
 
     getOauthToken: function() {
         console.log("Get oauth token")
-        fetch('http://xuyuan.me:8483/twitter/requestToken')
+        fetch(_apiRequestToken)
             .then((response) => {
                 if(response.status === 200) {
                     return response.json()

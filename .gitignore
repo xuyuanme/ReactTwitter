@@ -22,10 +22,6 @@ DerivedData
 *.xcuserstate
 project.xcworkspace
 
-# WebStorm
-#
-.idea/
-
 # node.js
 #
 node_modules/
@@ -65,3 +61,7 @@ proguard/
 
 # Android Studio captures folder
 captures/
+
+.idea/
+.dropbox.attr
+config.js

@@ -30,14 +30,14 @@ var ReactTwitter = React.createClass({
 
     // Handle Twitter website call back
     // reacttwitter://foo?oauth_token=a&oauth_verifier=b
-    handleUrl: function(event) {
+    handleUrl: function (event) {
         console.log("Handle call back " + event.url)
         var url_parts = url.parse(event.url, true)
         var query = url_parts.query
 
         fetch(_apiAccessToken + query.oauth_verifier)
             .then((response) => {
-                if(response.status === 200) {
+                if (response.status === 200) {
                     this.getProfile()
                 } else {
                     this.throwResponse(response)
@@ -49,11 +49,11 @@ var ReactTwitter = React.createClass({
             .done()
     },
 
-    getOauthToken: function() {
+    getOauthToken: function () {
         console.log("Get oauth token")
         fetch(_apiRequestToken)
             .then((response) => {
-                if(response.status === 200) {
+                if (response.status === 200) {
                     return response.json()
                 } else {
                     this.throwResponse(response)
@@ -72,14 +72,14 @@ var ReactTwitter = React.createClass({
         console.log("Get profile")
         fetch(_apiProfile)
             .then((response) => {
-                if(response.status === 200) {
+                if (response.status === 200) {
                     return response.json()
                 } else {
                     this.throwResponse(response)
                 }
             })
             .then((responseJson) => {
-                this.setState({ name: responseJson.name })
+                this.setState({name: responseJson.name})
             })
             .catch((error) => {
                 console.warn(error)
@@ -87,9 +87,9 @@ var ReactTwitter = React.createClass({
             .done()
     },
 
-    throwResponse: function(response) {
+    throwResponse: function (response) {
         console.log("Got " + response.status + " error")
-        if(response.status === 403) {
+        if (response.status === 403) {
             this.getOauthToken()
         }
         var error = new Error(response._bodyText)
@@ -97,7 +97,7 @@ var ReactTwitter = React.createClass({
         throw error
     },
 
-    render: function() {
+    render: function () {
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>

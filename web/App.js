@@ -21,25 +21,41 @@ export var App = React.createClass({
 
   getOauthToken: function() {
     console.log('getOauthToken')
-    $.get(_apiRequestToken)
-      .then((response) => {
-        window.location.replace(_tOauthAuthorize + response.oauthRequestToken)
+    fetch(_apiRequestToken, {
+      credentials: 'include'
+    }).then(this.checkStatus)
+      .then(response => {
+        return response.json()
       })
-      .fail((error) => {
-        this.handleError(error)
+      .then((json) => {
+        window.location.replace(_tOauthAuthorize + json.oauthRequestToken)
       })
+      .catch(this.handleError)
   },
 
   getProfile: function () {
     console.log('getProfile')
-    $.get(_apiProfile)
+    fetch(_apiProfile, {
+      credentials: 'include'
+    }).then(this.checkStatus)
       .then((response) => {
-        this.setState({name: response.name})
+        return response.json()
       })
-      .fail((error) => {
-        this.handleError(error)
+      .then((json) => {
+        this.setState({name: json.name})
       })
+      .catch(this.handleError)
+  },
 
+  checkStatus: function(response) {
+    if (response.status >= 200 && response.status < 300) {
+      return response
+    } else {
+      var error = new Error(response.statusText)
+      error.status = response.status
+      error.response = response
+      throw error
+    }
   },
 
   handleError: function(error) {

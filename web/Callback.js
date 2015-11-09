@@ -19,13 +19,20 @@ export var Callback = React.createClass({
 
   getAccessToken: function(oauth_verifier) {
     console.log('getAccessToken with ' + oauth_verifier)
-    $.get(_apiAccessToken + oauth_verifier)
-      .then((response) => {
-        var getUrl = window.location
-        var baseUrl = getUrl.protocol + '//' + getUrl.host + '/' + getUrl.pathname.split('/')[1]
-        window.location.replace(baseUrl)
+    fetch(_apiAccessToken + oauth_verifier, {
+      credentials: 'include'
+    }).then((response) => {
+        if (response.status >= 200 && response.status < 300) {
+          var getUrl = window.location
+          var baseUrl = getUrl.protocol + '//' + getUrl.host + '/' + getUrl.pathname.split('/')[1]
+          window.location.replace(baseUrl)
+        } else {
+          console.warn(response)
+          this.setState({content: response.statusText})
+        }
       })
-      .fail((error) => {
+      .catch((error) => {
+        console.warn(error)
         this.setState({content: error.responseText})
       })
   },

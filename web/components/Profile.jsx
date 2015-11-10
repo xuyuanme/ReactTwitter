@@ -1,10 +1,11 @@
+
 import React from 'react';
 
 var _tOauthAuthorize = 'https://twitter.com/oauth/authorize?oauth_token='
 var _apiRequestToken = 'http://xuyuan.me:8483/twitter/requestToken'
 var _apiProfile = 'http://xuyuan.me:8483/twitter/profile'
 
-export var App = React.createClass({
+export var Profile = React.createClass({
   getInitialState: function() {
     console.log('getInitialState')
     return {}

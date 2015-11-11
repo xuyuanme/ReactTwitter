@@ -20,7 +20,6 @@ module.exports = {
     loaders: [{
       test: /\.jsx?$/,
       loader: 'babel',
-      include: path.join(__dirname, 'web'),
       exclude: /node_modules/,
       // react-transform config
       // https://github.com/gaearon/react-transform-hmr/issues/5

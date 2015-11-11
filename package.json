@@ -11,7 +11,11 @@
     "react-router": "^1.0.0-rc3",
     "react-native": "^0.13.0-rc",
     "url": "^0.11.0",
-    "history": "^1.13.0"
+    "history": "^1.13.0",
+    "redux": "^3.0.4",
+    "immutable": "^3.7.5",
+    "react-redux": "^4.0.0",
+    "redux-thunk": "^1.0.0"
   },
   "devDependencies": {
     "express": "^4.13.3",

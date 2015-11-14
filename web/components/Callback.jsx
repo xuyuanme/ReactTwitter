@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import * as actionCreators from '../../common/action_creators';
+import * as actionCreators from '../../common/actions/action_creators';
 
 export var Callback = React.createClass({
   getInitialState: function() {

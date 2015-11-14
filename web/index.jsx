@@ -8,7 +8,7 @@ import thunk from 'redux-thunk';
 import { AppContainer } from './components/App';
 import { ProfileContainer } from './components/Profile';
 import { CallbackContainer } from './components/Callback';
-import reducer from '../common/reducer';
+import reducer from '../common/reducers/reducer';
 
 const routes = <Route path='/' component={AppContainer}>
   <Route path='reacttwitter' component={ProfileContainer} />

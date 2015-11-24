@@ -10,8 +10,10 @@ ReactTwitter is a demo Twitter client to show how to share unified business logi
 4. For iOS app demo, open `./ios/ReactTwitter.xcodeproj` with Xcode, then run the app in simulator or device.
 5. Todo: Android app
 
-## Screenshots
+## Architecture
 
 ![ReactTwitter Arch](http://xuyuan.me/img/react-twitter-arch.jpg)
+
+## Screenshots
 
 ![ReactTwitter Screen](http://xuyuan.me/img/react-twitter-screen.jpg)

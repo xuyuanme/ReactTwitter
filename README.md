@@ -1,6 +1,6 @@
 # ReactTwitter
 
-ReactTwitter is a demo Twitter client to show how to share unified business logic code between React Native apps and React web projects. The project is as simple as only asking for user's oauth and show "Hello {username}", but it demonstrates the most basic aspects of front-end/back-end React program interaction.
+ReactTwitter is a demo Twitter client to show how to share unified business logic code between React Native apps and React web projects with Redux. The project is as simple as only asking for user's oauth and show "Hello {username}", but it demonstrates the most basic aspects of front-end/back-end React program interaction.
 
 ## Config & Run
 

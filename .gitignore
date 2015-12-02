@@ -63,6 +63,7 @@ proguard/
 captures/
 
 .idea/
+*.iml
 .dropbox.attr
 config.js
 

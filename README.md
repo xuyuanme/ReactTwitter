@@ -7,8 +7,8 @@ ReactTwitter is a demo Twitter client to show how to share unified business logi
 1. Config and run its server side counterparty [NodeTwitter](https://github.com/xuyuanme/NodeTwitter)
 2. `npm install`
 3. For website demo, run `node webDevServer.js`, then visit `http://localhost:8080/reacttwitter` in browser
-4. For iOS app demo, open `./ios/ReactTwitter.xcodeproj` with Xcode, then run the app in simulator or device.
-5. Todo: Android app
+4. For iOS app demo, open `./ios/ReactTwitter.xcodeproj` with Xcode, then run the app in simulator or device
+5. For Android app demo, run `react-native run-android` with simulator or device plugged in
 
 ## Architecture
 

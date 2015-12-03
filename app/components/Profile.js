@@ -31,7 +31,7 @@ export var Profile = React.createClass({
           Welcome {this.props.profile? this.props.profile.name : ''} to React Native!
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit index.ios.js
+          To get started, edit index.ios.js or index.android.js
         </Text>
         <Text style={styles.instructions}>
           Press Cmd+R to reload,{'\n'}

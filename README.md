@@ -16,4 +16,4 @@ ReactTwitter is a demo Twitter client to show how to share unified business logi
 
 ## Screenshots
 
-![ReactTwitter Screen](http://xuyuan.me/img/react-twitter-screen.jpg)
+![ReactTwitter Screen](http://xuyuan.me/img/react-twitter-screen.gif)

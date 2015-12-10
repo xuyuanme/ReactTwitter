@@ -8,7 +8,7 @@ export default function reducer(state = defaultState, action) {
   var newState
   switch(action.type) {
     case 'RECEIVE_PROFILE':
-      newState = state.set('profile', action.profile)
+      newState = defaultState.set('profile', action.profile)
       console.log('return new state:')
       console.log(newState)
       return newState

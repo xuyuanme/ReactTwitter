@@ -3,7 +3,7 @@ import {LinkingManager} from 'NativeModules'
 import { connect } from 'react-redux/native'
 import url from 'url'
 import * as actionCreators from '../../common/actions/action_creators'
-import ProfileContainer from './Profile'
+import Profile from './Profile'
 
 var {
   LinkingIOS,
@@ -85,7 +85,7 @@ export class App extends Component {
       }
     }
     return (
-      <ProfileContainer />
+      <Profile {...this.props} />
     )
   }
 }
@@ -93,6 +93,7 @@ export class App extends Component {
 function mapStateToProps(state) {
   return {
     'redirect': state.get('redirect'),
+    'profile': state.get('profile'),
     'error': state.get('error')
   }
 }

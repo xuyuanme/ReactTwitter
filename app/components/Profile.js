@@ -1,6 +1,4 @@
 import React, { Component } from 'react-native'
-import { connect } from 'react-redux/native'
-import * as actionCreators from '../../common/actions/action_creators'
 
 var {
   StyleSheet,
@@ -8,7 +6,7 @@ var {
   View,
 } = React
 
-export var Profile = React.createClass({
+export default Profile = React.createClass({
   getInitialState: function() {
     console.log('Profile getInitialState')
     return {}
@@ -60,14 +58,3 @@ var styles = StyleSheet.create({
     marginBottom: 5,
   }
 })
-
-function mapStateToProps(state) {
-  return {
-    'profile': state.get('profile')
-  }
-}
-
-export default ProfileContainer = connect(
-  mapStateToProps,
-  actionCreators
-)(Profile);
